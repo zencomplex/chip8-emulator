@@ -6,12 +6,19 @@ typedef unsigned char   byte;
 typedef unsigned short  word;
 
 // Opcodes
+#define NOP         0x0000 // No operation
 #define CLS         0x00E0 // Clear screen
-#define JMP         0x1000 // Jump
 #define RET         0x00EE // Return
+#define JMP         0x1000 // Jump
+#define CALL        0x2000 // Call subroutine
+#define SE          0x3000 // Skip if Vx = byte
+#define SNE         0x4000 // Skip if Vx != byte
+#define SER         0x5000 // Skip if Vx = Vy
 #define SETVX       0x6000 // Set register VX
 #define ADD         0x7000 // Add value to register VX
+#define LDR         0x8000 // Set Vx = Vy
 #define SETI        0xA000 // Set index register I
+#define RND         0xC000 // Vx = random byte & nn
 #define DRW         0xD000 // Display/draw
 
 // Load Address
@@ -27,7 +34,7 @@ typedef unsigned short  word;
 #define SCALE           10
 
 byte drawFlag;
-byte Display[WIDTH * HEIGHT];
+byte Screen[WIDTH * HEIGHT];
 
 byte soundFlag;
 
