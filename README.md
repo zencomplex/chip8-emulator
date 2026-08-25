@@ -10,4 +10,4 @@ Build:
 
 Run:
 
-./build/Emulator /path/to/rom
+./build/Emulator /demo/Maze.ch8
