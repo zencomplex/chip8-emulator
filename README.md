@@ -2,8 +2,12 @@
 
 The debug flag is misleading, because there is no debug mode currently.
 
-Usage:
+Build:
 
 ./emu.sh -r: Build release mode
 
 ./emu.sh -c [-r, -d]: Build [release, debug] and clean old build files
+
+Run:
+
+./build/Emulator /path/to/rom
